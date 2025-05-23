@@ -32,6 +32,7 @@ body{
 .nav-link{
     border-radius: 1rem;
     transition: background-color 1s;
+    padding: 0.5rem;
 }
 
 .nav-link:hover{
@@ -44,4 +45,40 @@ body{
 
 .navbar-toggler:focus{
     box-shadow: none;
+}
+
+
+/*=== Responsive===*/
+@media(max-width:480px){
+    /*menu*/
+    .navbar{
+        margin: 0 1rem 0 1rem;
+    }
+    .navbar-brand img{
+        max-height: 1.5rem;
+    }
+    .navbar-toggler span{
+        max-width: 1.5rem;
+    }        
+    .nav-link{
+        font-size: 0.8rem;
+    }        
+}
+
+@media(max-width:1024px){
+    /*menu*/
+    .nav-item{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media(min-width:1920px){
+    /*menu*/
+    .nav-link {
+        font-size: 1.5rem;
+    }
+    .navbar-brand img { 
+        max-height: 3rem; 
+    }
 }
