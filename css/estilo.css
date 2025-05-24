@@ -48,6 +48,55 @@ body{
 }
 
 
+/*=== Page 404 ===*/
+.img-404{
+    margin-top: 2rem;
+    height: 260px;
+    object-fit: cover;
+}
+
+.text-inicio{
+    font-family: var(--font-family);
+
+    /*Texto con degrade*/
+    background-image: linear-gradient(to right, rgb(71, 71, 71), var(--black));
+    color: transparent;
+    background-clip: text;  
+    -webkit-background-clip: text;
+}
+
+.fw-medium {
+    font-weight: var(--font-weight) !important;
+}
+
+.btn-homepage{
+    background-color: var(--black);
+    border: none;
+}
+
+.icon-arrow{
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-homepage:hover{
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+
+    /*cambio color de icon-arrow al hacer hover en btn-homepage*/
+    .icon-arrow{
+        color: var(--white);
+        background-color: var(--black);
+    } 
+}  
+
+
 /*=== Responsive===*/
 @media(max-width:480px){
     /*menu*/
