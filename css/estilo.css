@@ -48,7 +48,7 @@ body{
 }
 
 
-/*=== Page 404 ===*/
+/*=== 404 ===*/
 .img-404{
     margin-top: 2rem;
     height: 260px;
@@ -98,6 +98,20 @@ body{
 
 
 /*=== Responsive===*/
+@media(max-width:320px){
+    /*404*/
+    .img-404{  
+        height: 8rem !important;
+        width: auto;
+    }
+    .text-inicio{
+        font-size: 0.9rem !important;
+    }    
+    .btn-homepage{
+        font-size: 0.9rem !important;
+    }
+}
+
 @media(max-width:480px){
     /*menu*/
     .navbar{
@@ -111,7 +125,12 @@ body{
     }        
     .nav-link{
         font-size: 0.8rem;
-    }        
+    }    
+    
+    /*404*/
+    .img-404{
+        height: 11rem;  
+    }
 }
 
 @media(max-width:1024px){
@@ -129,5 +148,20 @@ body{
     }
     .navbar-brand img { 
         max-height: 3rem; 
+    }
+
+    /*404*/
+    .img-404{
+        height: 26rem;
+    }
+    .text-inicio{
+        font-size: 1.5rem !important;
+    }    
+    .btn-homepage{
+        font-size: 1.5rem !important;
+    }
+    .icon-arrow{
+        width: 2.5rem !important;
+        height: 2.5rem !important;
     }
 }
