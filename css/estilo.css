@@ -127,6 +127,8 @@ body{
 
 .img-icon{
     transition: filter 1s; 
+    width: 18px;
+    height: 18px;
 }
 
 /*Invierto colores svg*/
@@ -224,12 +226,23 @@ body{
         margin: 0 4rem 0 4rem;
     }
 
+    .phone-email{
+        padding: 0rem;
+    }
+    .img-icon{
+        width: 16px;
+        height: 16px;
+    }
     .btn-awesomic{
         margin-right: 1rem;
     }
 }
 
 @media(min-width:1440px){
+    .img-icon{
+        width: 18px;
+        height: 18px;
+    }
     .btn-awesomic{
         margin-right: 3rem;
     }
