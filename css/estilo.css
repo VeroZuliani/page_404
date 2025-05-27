@@ -7,6 +7,8 @@
 :root{
     --bg-color-body: #e0e3ec;
     --bg-color-navlink: #fcfcfc94;
+    --bg-color-contacto:#efeff3;
+    --bg-color-btn: #f3f3f3;
     --black: black;
     --white: white;
 
@@ -25,14 +27,11 @@ body{
     width: 100vw;
 }
 
-.navbar{
-    margin: 0 4rem 0 4rem;
-}
-
 .nav-link{
     border-radius: 1rem;
     transition: background-color 1s;
     padding: 0.5rem;
+    font-size: 0.8rem; 
 }
 
 .nav-link:hover{
@@ -47,16 +46,30 @@ body{
     box-shadow: none;
 }
 
+.nav-item{
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.navbar-brand img{
+    height: 2rem; 
+}
+
+.navbar-toggler span{
+    width: 1.5rem;
+}
+
 
 /*=== 404 ===*/
 .img-404{
     margin-top: 2rem;
-    height: 260px;
+    height: 8rem; 
     object-fit: cover;
 }
 
 .text-inicio{
     font-family: var(--font-family);
+    font-size: 0.9rem;
 
     /*Texto con degrade*/
     background-image: linear-gradient(to right, rgb(71, 71, 71), var(--black));
@@ -65,13 +78,10 @@ body{
     -webkit-background-clip: text;
 }
 
-.fw-medium {
-    font-weight: var(--font-weight) !important;
-}
-
 .btn-homepage{
     background-color: var(--black);
     border: none;
+    font-size: 0.9rem;
 }
 
 .icon-arrow{
@@ -99,8 +109,12 @@ body{
 
 /*=== Footer ===*/
 .contacto{
-    background-color:#efeff3;
+    background-color: var(--bg-color-contacto);
     box-shadow: 0px 15px 30px 1px rgba(31, 31, 31, 0.15);
+}
+
+.ubicacion, .phone, .email{
+    font-size: 0.9rem;
 }
 
 .icon{
@@ -108,7 +122,7 @@ body{
 }
 
 .icon:hover{
-    background-color: black;
+    background-color: var(--black);
 }
 
 .img-icon{
@@ -120,15 +134,14 @@ body{
     filter: invert(1); 
 }
 
-
 .list-group-item{
     border: none;
-    background-color: #e0e3ec;
+    background-color: var(--bg-color-body);
 }
 
 .icon-link{
     text-decoration: none;
-    color: black;
+    color: var(--black);
     font-family: var(--font-family);
     font-weight: var(--font-weight);
     font-size: 13px;
@@ -138,91 +151,125 @@ body{
 }
 
 .icon-link:hover{
-    background-color: #fcfcfc94;
+    background-color: var(--bg-color-navlink);
 }
 
 .btn-awesomic{
-    background-color: #f3f3f3; 
+    background-color: var(--bg-color-btn); 
     box-shadow: 0px 15px 30px 1px rgba(31, 31, 31, 0.15);
-    margin-top: 1rem;
     border: none;
     transition: background-color 1s;
     display: flex;
     align-items: center;
+    font-size: 0.8rem;
 }
 
 .btn-awesomic:hover{
-    background-color: white;
+    background-color: var(--white);
 }
-
-
 
 
 /*=== Responsive===*/
-@media(max-width:320px){
-    /*404*/
-    .img-404{  
-        height: 8rem !important;
-        width: auto;
+@media(min-width:480px){
+    .img-404{
+        height: 11rem; 
     }
     .text-inicio{
-        font-size: 0.9rem !important;
-    }    
+        font-size: 1.2rem;
+    }
     .btn-homepage{
-        font-size: 0.9rem !important;
+        font-size: 1rem;
+    }
+
+    .ubicacion, .phone, .email{
+        font-size: 1rem;
     }
 }
 
-@media(max-width:480px){
-    /*menu*/
-    .navbar{
-        margin: 0 1rem 0 1rem;
-    }
+@media(min-width:768px){
     .navbar-brand img{
-        max-height: 1.5rem;
+        height: 2.5rem; 
     }
     .navbar-toggler span{
-        max-width: 1.5rem;
-    }        
+        width: 2rem;
+    }
     .nav-link{
-        font-size: 0.8rem;
-    }    
-    
-    /*404*/
+        font-size: 1rem; 
+    }
+
     .img-404{
-        height: 11rem;  
+        height: 15rem; 
+    }
+    .text-inicio{
+        font-size: 1.5rem;
+    }
+    .btn-homepage{
+        font-size: 1rem;
+    }
+
+    .btn-awesomic{
+        font-size: 1rem;
+        margin-right: 1rem;
     }
 }
 
-@media(max-width:1024px){
-    /*menu*/
-    .nav-item{
-        display: flex;
-        justify-content: flex-end;
+@media(min-width:1024px){
+    .btn-awesomic{
+        margin-right: 6rem;
+    }
+}
+
+@media(min-width:1280px){
+    .navbar{
+        margin: 0 4rem 0 4rem;
+    }
+
+    .btn-awesomic{
+        margin-right: 1rem;
+    }
+}
+
+@media(min-width:1440px){
+    .btn-awesomic{
+        margin-right: 3rem;
     }
 }
 
 @media(min-width:1920px){
-    /*menu*/
-    .nav-link {
+    .nav-link{
         font-size: 1.5rem;
     }
-    .navbar-brand img { 
-        max-height: 3rem; 
+    .navbar-brand img{
+        max-height: 3rem;
     }
 
-    /*404*/
+
     .img-404{
         height: 26rem;
     }
     .text-inicio{
-        font-size: 1.5rem !important;
-    }    
+        font-size: 1.5rem;
+    }
     .btn-homepage{
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
     .icon-arrow{
-        width: 2.5rem !important;
-        height: 2.5rem !important;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+
+    .ubicacion{
+        font-size: 20px;
+    }
+    .img-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .icon-link{
+        font-size: 15px;
+    }
+    .btn-awesomic{
+        margin-right: 9rem;
     }
 }
