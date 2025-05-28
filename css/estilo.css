@@ -226,6 +226,9 @@ body{
         margin: 0 4rem 0 4rem;
     }
 
+    .ubicacion{
+        font-size: 0.95rem;
+    }
     .phone-email{
         padding: 0rem;
     }
@@ -239,6 +242,9 @@ body{
 }
 
 @media(min-width:1440px){
+    .ubicacion{
+        font-size: 1rem;
+    }
     .img-icon{
         width: 18px;
         height: 18px;
